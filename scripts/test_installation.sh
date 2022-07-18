@@ -1,7 +1,11 @@
 # Script that tests installation of openvino on Raspberry Pi
 
+#Setup current session
+sh /opt/intel/openvino/install_dependencies/install_NCS_udev_rules.sh
+
 #Create build folder
-mkdir build && cd build
+mkdir build 
+cd build
 
 #Build object_detection_sample_ssd
 cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_FLAGS="-march=armv7-a" /opt/intel/openvino/deployment_tools/inference_engine/samples
