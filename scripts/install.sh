@@ -1,8 +1,9 @@
 # Script that installs openvino on Raspberry Pi
 # host OS = 32 bit "RASPBERRY PI OS(LEGACY)"
 
-#Downnload OpenVino 2019.3 and pretrained models for test
-sudo mkdir models && cd models/
+#Download OpenVino 2019.3 and pretrained models for test
+mkdir models 
+cd models
 wget https://download.01.org/opencv/2019/openvinotoolkit/R3/l_openvino_toolkit_runtime_raspbian_p_2019.3.334.tgz
 wget --no-check-certificate https://download.01.org/opencv/2019/open_model_zoo/R1/models_bin/face-detection-adas-0001/FP16/face-detection-adas-0001.bin
 wget --no-check-certificate https://download.01.org/opencv/2019/open_model_zoo/R1/models_bin/face-detection-adas-0001/FP16/face-detection-adas-0001.xml
@@ -12,7 +13,7 @@ sudo apt install -y cmake
 
 #Create install folder
 sudo mkdir /opt/intel
-sudo mkdir /opt/intel/mkdir
+sudo mkdir /opt/intel/openvino
 
 #Extract
 sudo tar -xvzf l_openvino_toolkit_runtime_raspbian_p_2019.3.334.tgz --strip 1 -C /opt/intel/openvino
