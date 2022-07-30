@@ -8,8 +8,8 @@ mkdir build
 cd build
 
 #Build object_detection_sample_ssd
-cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_FLAGS="-march=armv7-a" -D WITH_PROTOBUF=ON /opt/intel/openvino/deployment_tools/inference_engine/samples
-make -j2 object_detection_sample_ssd 
+cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_FLAGS="-march=armv7-a" /opt/intel/openvino/deployment_tools/inference_engine/samples
+make -j2 object_detection_sample_ssd
 
 #Perform inference
 cd ..
